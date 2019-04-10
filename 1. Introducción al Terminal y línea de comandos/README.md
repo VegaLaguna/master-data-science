@@ -1,11 +1,11 @@
 # Ejercicios de introducción al terminal y línea de comandos
 
-### 1. Create a directory “first_dir” in you home folder
+##### 1. Create a directory “first_dir” in you home folder
 
     Creamos el directorio: mkdir first_dir
     
 
-2. Create an empty file “text_file.txt” inside “first_dir” directory. 
+##### 2. Create an empty file “text_file.txt” inside “first_dir” directory. 
 
     Primero nos situamos en el directorio donde queremos crear el archivo: cd first_dir
     Creamos el archivo: touch text_file.txt
