@@ -1,6 +1,6 @@
 # Ejercicios de introducción al terminal y línea de comandos
 
-1. Create a directory “first_dir” in you home folder
+### 1. Create a directory “first_dir” in you home folder
 
     Creamos el directorio: mkdir first_dir
     
