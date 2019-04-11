@@ -1,6 +1,6 @@
 # Ejercicios de introducción al terminal y línea de comandos
 
-## Manejo de ficheros
+## Parte 1 - Manejo de ficheros
 
 ##### 1. Create a directory “first_dir” in you home folder
     Creamos el directorio: mkdir first_dir
@@ -53,3 +53,38 @@
     Para borrar se usa el comando: rm -r sub2
     
 
+
+## Parte 2 - Manejo del contenido
+
+##### 1. Go to data/shell/ directory and use less to open Finn.txt
+
+    Primero nos colocamos en el directorio que nos piden: cd data/shell/
+    Abrimos el archivo Finn.txt usando less en lugar de cat 
+    (porque queremos trabajar de manera interactiva con él): less Finn.txt
+    
+###### a) Locate the lines starting with “The”
+
+    Usamos el siguiente comando para localizar palabras que estén al principio de lineas: ^The
+    Para movernos sobre las distintas palabras que hemos localizado: n (si queremos la siguiente) 
+    y N (si queremos ver la anterior)
+    
+###### b) Locate the lines ending with “works”
+
+    Usamos el siguiente comando: works$
+
+
+##### 2. Open ~/Data/opentraveldata/optd_aircraft.csv with less command. Search for “Canada” and then search for “Puma”
+
+    Como en la primera parte del punto anterior: cd ../opentraveldata
+    Abrimos el archivo: less optd_aircraft.csv
+    Buscamos Canada: /Canada (/si buscamos hacia delante o ? si buscamos hacia atrás)
+    Volvemos al inicio y buscamos Puma: g y luego /Puma
+
+
+##### 3. Use help to find out how to get the list of subdirectories limited to 2 sublevels by using “tree” command
+
+    Si no tenemos instalado el comando tree, primero hay que poner: sudo apt-get install tree
+    La ayuda se despliega con el comando man (de manual): man tree
+    Vemos que el comando para desplegar los subdirectorios es: tree -L 2
+
+  
