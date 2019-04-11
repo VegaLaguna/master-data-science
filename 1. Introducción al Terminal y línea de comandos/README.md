@@ -36,14 +36,16 @@
 
 ##### 8. Change file name of “first_dir /sub2/text_file.txt.2” to “first_dir /sub2/text_file.txt.backup”
 
-    Para cambiar el nombre usamos el mismo comando que para mover archivos: mv sub2/text_file.txt.2 sub2/text_file.txt.backup
+    Para cambiar el nombre usamos el mismo comando que para mover archivos: 
+    mv sub2/text_file.txt.2 sub2/text_file.txt.backup
 
 ##### 9. Move “first_dir /sub2/text_file.txt.backup” to “first_dir” directory as hidden file
 
     Hay que tener en cuenta dos conceptos:
         - Para llamar al directorio en el que estamos se usa un punto "./"
         - Los archivos ocultos llevan un punto "." delante del nombre
-    Por tanto para mover el archivo al directorio donde estamos y ponerlo como archivo oculto: mv sub2/text_file.txt.backup ./.text_file.txt.backup
+    Por tanto para mover el archivo al directorio donde estamos y ponerlo como archivo oculto: 
+    mv sub2/text_file.txt.backup ./.text_file.txt.backup
     
 
 ##### 10. Delete the “sub2” subdirectory
