@@ -1,9 +1,5 @@
-# master-data-science
+# Curso Data Science
 
-Escribo otras cosas
+En las siguientes carpetas se encuentran los distintos apartados que vamos a ir trabajando:
 
-Bla bla bla
-
-Linea aniadida desde la web
-
-Hola, hoy es día 10 de abril
+  1. Introducción al Terminal y línea de comandos
