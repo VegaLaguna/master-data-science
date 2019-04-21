@@ -1,12 +1,11 @@
 # Ejercicios de introducción al terminal y línea de comandos
 
-[Parte 1 - Manejo de ficheros](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-1---manejo-de-ficheros)
+* [Parte 1 - Manejo de ficheros](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-1---manejo-de-ficheros)
+* [Parte 2 - Manejo del contenido](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-2---manejo-del-contenido)
+* [Parte 3 - Manejo del fichero y su contenido](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-3---manejo-del-fichero-y-su-contenido)
+* [Parte 4 - Búsqueda de ficheros](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-4---b%C3%BAsqueda-de-ficheros)
 
-* **Parte 2 - Manejo del contenido**
-* **Parte 3 - Manejo del fichero y su contenido**
-* **Parte 4 - Búsqueda de ficheros**
-
-
+----------------------------------------------------------------------------------------------------------------------------------------
 
 ## Parte 1 - Manejo de ficheros
 
