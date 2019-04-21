@@ -1,19 +1,19 @@
 # Ejercicios de introducción al terminal y línea de comandos
 
-* **Parte 1 - Manejo de ficheros**
+- [Parte 1 - Manejo de ficheros] (#manejo_ficheros)
+
 * **Parte 2 - Manejo del contenido**
 * **Parte 3 - Manejo del fichero y su contenido**
 * **Parte 4 - Búsqueda de ficheros**
-> 
-> 
->                             
->                                  
 
+
+
+<a name="manejo_ficheros"></a>
 ## Parte 1 - Manejo de ficheros
 
 ##### 1. Create a directory “first_dir” in you home folder
 
-    Creamos el directorio: `mkdir` first_dir
+    Creamos el directorio: mkdir first_dir
     
 ##### 2. Create an empty file “text_file.txt” inside “first_dir” directory.
 
