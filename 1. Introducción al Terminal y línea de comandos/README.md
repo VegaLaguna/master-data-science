@@ -56,11 +56,11 @@
 #### 1. Go to data/shell/ directory and use less to open Finn.txt
 - Primero nos colocamos en el directorio que nos piden: `cd` data/shell/
 - Abrimos el archivo Finn.txt usando `less` en lugar de `cat` (porque queremos trabajar de manera interactiva con él): `less` Finn.txt
-    
+
 #####    a) Locate the lines starting with “The”
 - Usamos el siguiente comando para localizar palabras que estén al principio de lineas: `/^`The
 - Para movernos sobre las distintas palabras que hemos localizado: `n` (si queremos la siguiente) y `N` (si queremos ver la anterior)
-    
+
 #####    b) Locate the lines ending with “works”
 - Usamos el siguiente comando: `/works$`
 
@@ -110,7 +110,7 @@
           - \`\`: evalúa y reemplaza
 - Por tanto: `echo` "This file is created by VEGA on: $(date)"
     
-    
+
 #### 5. Save the information of 3 largest files located inside ~/Data/us_dot/otp/ into a three_largest_file.txt. 
 #### (Hint: use ls with sort option and pipe the result)
 - Para obtener la información detallada del contenido de un directorio: `ls -l`
@@ -128,7 +128,7 @@
 - Y lo tenemos que redirigir a un archivo txt que vamos a crear: `> `last_20_commands.txt
 - Para encadenar comandos usaremos el pipe: `cat -n ~/.history | tail -n 20 > `last_20_commands.txt
     
-    
+
 #### 7. Print first 3 lines of ~/Data/shell/Text_example.txt together with line numbers
 - Solo tenemos que hacer un head de las 3 primeras lineas: `head -n 3`
 - Pero el head no nos permite imprimir los números de líneas, por tanto necesitamos un `cat -n`
@@ -181,3 +181,47 @@
 
     
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Parte 5 - Selección y recuento
+
+#### 1. Find top 10 files by size in your home directory including the subdirectories. Sort them by size and print the result including the size and the name of the file (Hint: use find with -size and -exec ls -s parameters)
+- Como hemos visto en la parte 4, usamos el comando `find` y sus opciones.
+- Para coger los 10 ficheros más grandes usamos: `-size +10M` (podríamos poner un límite superior más alto también)
+- Para sacar el tamaño y nombre de los archivos hay que aplicar el comando `ls -s` dentro del `find`: `-exec ls -s -sh {} \;` 
+- Lo primero que se imprime es el tamaño, y es lo que tenemos que ordenar: `sort -nr` (reverse porque pone primero los más pequeños y nosotros queremos los más grandes)
+- Para sacar los 10 primeros ficheros hacemos un `head`
+- El código quedaría: `find -type f -size +10M -exec ls -sh {} \; | sort -nr | head`
+
+
+#### 2. Create a dummy file with this command : seq 15 > 20lines.txt; seq 9 1 20 >> 20lines.txt; echo "20\n20" >> 20lines.txt; (check the content of file first)
+- Creamos el archivo que nos piden: seq 15 > 20lines.txt; seq 9 1 20 >> 20lines.txt; echo "20\n20" >> 20lines.txt
+
+##### a) Sort the lines of file based on alphanumeric characters
+- Usamos el comando `sort -d` 20lines.txt (podríamos obviar el -d porque es la opción por defecto)
+
+##### b) Sort the lines of file based on numeric values and eliminate the duplicates
+- Usamos el comando `sort -n` para ordenarlos por valor numérico
+- Usamos la opción `-u` para eliminar los duplicados
+- Por tanto: `sort -nu` 20lines.txt
+
+##### c) Print all duplicated lines of the file
+- Para imprimir todos los duplicados tenemos que usar el comando `uniq -d`
+- Pero `uniq` solo reconoce los duplicados si son consecutivos, es decir que primero hay que ordenarlos.
+- Los comandos serían: `sort -n` 20lines.txt `| uniq -d`
+
+##### d) Print the line which has most repetitions
+- El comando `uniq -c` nos muestra cuantas veces se repite cada elemento.
+- Hay que aplicarle un `sort` para ordenar esta lista y luego un `head` del primer elemento. 
+- El código quedaría: `sort -n `20lines.txt `| uniq -c | sort -nr | head -1`
+
+##### e) Print all lines with the number of repetitions sorted by the number of repetitions from lowest to highest
+- Aplicamos los comandos del ejercicio anterior: `sort -n` 20lines.txt `| uniq -c | sort -n`
+
+
+#### 3. Create another file with this command : seq 0 2 40 > 20lines2.txt
+- Creamos el nuevo archivo: seq 0 2 40 > 20lines2.txt (es una lista de números de 0 a 40 con un paso de 2)
+
+##### a) Create 3rd file from the first two but without duplicates
+##### b) Merge the first two files. Print unique lines together with the number of occurrences  inside the merged file and sorted based on line content.
+#### 4. Go to ~/Data/opentraveldata. Get the line with the highest number of engines using sort.
