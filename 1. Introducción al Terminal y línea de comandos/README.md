@@ -1,9 +1,9 @@
 # Ejercicios de introducción al terminal y línea de comandos
 
-* **Parte 1 - Manejo de ficheros
-* **Parte 2 - Manejo del contenido
-* **Parte 3 - Manejo del fichero y su contenido
-* **Parte 4 - Búsqueda de ficheros
+* **Parte 1 - Manejo de ficheros**
+* **Parte 2 - Manejo del contenido**
+* **Parte 3 - Manejo del fichero y su contenido**
+* **Parte 4 - Búsqueda de ficheros**
 
 
 
