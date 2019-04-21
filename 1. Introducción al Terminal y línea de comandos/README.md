@@ -1,6 +1,6 @@
 # Ejercicios de introducción al terminal y línea de comandos
 
-- [Parte 1 - Manejo de ficheros] (#manejo_ficheros)
+[Parte 1 - Manejo de ficheros](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-1---manejo-de-ficheros)
 
 * **Parte 2 - Manejo del contenido**
 * **Parte 3 - Manejo del fichero y su contenido**
@@ -8,7 +8,6 @@
 
 
 
-<a name="manejo_ficheros"></a>
 ## Parte 1 - Manejo de ficheros
 
 ##### 1. Create a directory “first_dir” in you home folder
