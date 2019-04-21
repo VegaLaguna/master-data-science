@@ -1,5 +1,13 @@
 # Ejercicios de introducción al terminal y línea de comandos
 
+* **Parte 1 - Manejo de ficheros
+* **Parte 2 - Manejo del contenido
+* **Parte 3 - Manejo del fichero y su contenido
+* **Parte 4 - Búsqueda de ficheros
+
+
+
+
 ## Parte 1 - Manejo de ficheros
 
 ##### 1. Create a directory “first_dir” in you home folder
@@ -91,7 +99,7 @@
 
 
 
-## Parte 3 - Manejo del ficheros y su contenido
+## Parte 3 - Manejo del fichero y su contenido
 
 ##### 1. Go to ~/Data/Shell/ and use Text_example.txt to generate a new file with the same content but with line number at the beginning of each line.
 
@@ -173,7 +181,7 @@
     
     
     
-## Parte 4. Búsqueda de ficheros
+## Parte 4 - Búsqueda de ficheros
 
 ##### 1. Find all files located ONLY inside subdirectories of your home directory which have been modified in last 60min
 
