@@ -60,7 +60,7 @@
 
     Para borrar se usa el comando: rm -r sub2
     
-
+----------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Parte 2 - Manejo del contenido
@@ -96,6 +96,7 @@
     La ayuda se despliega con el comando man (de manual): man tree
     Vemos que el comando para desplegar los subdirectorios es: tree -L 2
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -178,7 +179,7 @@
     Para contar el número de palabras usamos: wc -w 
     Pero primero hay que separar las 5 primeras líneas del texto: head -n 5 ~/Data/shell/Finn.txt | wc -w
 
-    
+----------------------------------------------------------------------------------------------------------------------------------------   
     
     
 ## Parte 4 - Búsqueda de ficheros
@@ -211,3 +212,4 @@
 ##### 4. Get top 3 largest files per subdirectory inside ~/Data/ 
 
     
+----------------------------------------------------------------------------------------------------------------------------------------
