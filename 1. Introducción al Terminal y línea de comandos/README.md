@@ -223,5 +223,49 @@
 - Creamos el nuevo archivo: seq 0 2 40 > 20lines2.txt (es una lista de números de 0 a 40 con un paso de 2)
 
 ##### a) Create 3rd file from the first two but without duplicates
-##### b) Merge the first two files. Print unique lines together with the number of occurrences  inside the merged file and sorted based on line content.
-#### 4. Go to ~/Data/opentraveldata. Get the line with the highest number of engines using sort.
+- Para concatenar dos archivos en un tercero: 20lines.txt 20lines.txt `>` 20lines3.txt
+- Pero queremos que no haya repeticiones, por lo tanto hay que aplicarle un `sort -nu`
+- El código quedaría: `sort -nu` 20lines.txt 20lines.txt `>` 20lines3.txt
+
+##### b) Merge the first two files. Print unique lines together with the number of occurrences inside the merged file and sorted based on line content.
+- Podemos concatenar los archivos sin tener que crear un tercero.
+- Habría que aplicar un código parecido al anterior pero usando un pipe con `uniq -c`, que cuenta el número de elementos repetidos.
+- El código sería: `sort -n` 20lines.txt 20lines.txt `| uniq -c`
+
+#### 4. Go to ~/Data/opentraveldata. Get the line with the highest number of engines from optd_aircraft.csv using sort.
+- Primero vemos el contenido del archivo optd_aircraft.csv: `less` optd_aircraft.csv
+- Vemos que la variable que nos piden (number of engines) está en la 7ª columna.
+- Los delimitadores de las columnas en este caso son "^", por lo tanto se usará la opción `sort -t "^"`
+- Tendremos que hacer un `sort` que se base en esa columna: `sort -t "^" -k 7rn,7` optd_aircraft.csv | head -1`
+(hacemos un reverse porque sino empieza por las columnas vacías)
+
+    
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Parte 6 - Procesado y filtrado
+
+#### Go to ~/Data/opentraveldata
+#### 1. Change the delimiter of optd_aircraft.csv to “,”
+
+
+#### 2. Check if optd_por_public.csv has repeated white spaces
+
+
+#### 3. How many columns has optd_por_public.csv? (Hint: use head and tr)
+
+
+#### 4. Print column names of optd_por_public.csv  together with their column number. (Hint: use paste)
+
+
+#### 5. Use optd_airlines.csv to obtain the airline with the most flights?
+
+
+#### 6. Use optd_airlines.csv to obtain number of airlines in each alliance?
+
+
+
+
+
+
+
