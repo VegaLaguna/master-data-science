@@ -4,6 +4,8 @@
 * [Parte 2 - Manejo del contenido](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-2---manejo-del-contenido)
 * [Parte 3 - Manejo del fichero y su contenido](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-3---manejo-del-fichero-y-su-contenido)
 * [Parte 4 - Búsqueda de ficheros](https://github.com/VegaLaguna/master-data-science/tree/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos#parte-4---b%C3%BAsqueda-de-ficheros)
+* [Parte 5 - Selección y recuento](https://github.com/VegaLaguna/master-data-science/blob/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos/README.md#parte-5---selecci%C3%B3n-y-recuento)
+* [Parte 6 - Procesado y filtrado](https://github.com/VegaLaguna/master-data-science/blob/master/1.%20Introducci%C3%B3n%20al%20Terminal%20y%20l%C3%ADnea%20de%20comandos/README.md#parte-6---procesado-y-filtrado)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
