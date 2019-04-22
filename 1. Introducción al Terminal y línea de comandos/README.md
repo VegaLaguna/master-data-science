@@ -245,24 +245,39 @@
 
 ## Parte 6 - Procesado y filtrado
 
-#### Go to ~/Data/opentraveldata
 #### 1. Change the delimiter of optd_aircraft.csv to “,”
+- Sabemos que el archivo optd_aircraft.csv tiene como delimitador "^"
+- Para cambiar de delimitador usamos el comando `tr`, pero no se puede ejecutar directamente sobre un archivo. 
+- Primero hay que leer el archivo con un `cat` por ejemplo y luego aplicarle el `tr` con un pipe.
+- El código quedaría: `cat` optd_aircraft.csv `| tr "^" ","`
 
-
-#### 2. Check if optd_por_public.csv has repeated white spaces
-
+#### 2. Check if optd_por_public.csv has repeated white spaces.
+- El comando `tr` tiene la opción `-s` que reduce el caracter que le indicamos si lo encuentra repetido. 
+- Por tanto lo que se podría hacer es: `cat` optd_por_public `| tr -s [:blank:] | wc`
+- Este código nos contaría las líneas, palabras y caracteres del archivo optd_por_public después de quitarle los posibles espacios repetidos.
+- Si comparamos el número de caracteres con el que había en el archivo original (`wc`optd_por_public) veremos que ha disminuido, por lo tanto si que habían espacios en blanco repetidos.
 
 #### 3. How many columns has optd_por_public.csv? (Hint: use head and tr)
+- Sabemos que en la primera linea del archivo están los títulos de las columnas, por tanto hacemos un `head -1`
+- Vemos que el delimitador es "^", por lo tanto podemos aplicar un `tr "^" "\n"` para que convierta el delimitador que teníamos en saltos de línea. 
+- Una vez tenemos los títulos de las columnas uno por fila, podemos hacer un `wc -l` para que cuente las líneas/filas.
+- El código quedaría: `head -1` optd_por_public.csv `| tr "^" "\n" | wc -l`
 
-
-#### 4. Print column names of optd_por_public.csv  together with their column number. (Hint: use paste)
-
+#### 4. Print column names of optd_por_public.csv together with their column number. (Hint: use paste)
+- Usamos el comando `paste` que nos permite concatenar dos archivos en paralelo (no uno detrás del otro).
+- En el apartado anterior hemos visto cuantas columnas tenía nuestro archivo : 46
+- También hemos sacado los nombres de cada una de esas columnas: `tr "^" "\n"`
+- Podemos encadenar estos dos elementos: `paste <(seq 46) <(head -1 `optd_por_public.csv` | tr "^" "\n")`
 
 #### 5. Use optd_airlines.csv to obtain the airline with the most flights?
-
+- Al abrir el archivo vemos que su delimitador también es "^". 
+- Las columnas que nos interesan son la 8 (nombre de la aerolínea) y la 14 (cantidad de vuelos), por tanto haremos un `cut` por esas dos columnas: `cut -d "^" -f8,14` optd_airlines.csv
+- Ahora tenemos que ordenarlas con `sort -t "^" -k2nr,2` para que ordene en orden descendente la cantidad de vuelos.
+- Como solo queremos ver la primera línea, hacemos un `head -1`
 
 #### 6. Use optd_airlines.csv to obtain number of airlines in each alliance?
-
+- La columna que nos interesa ahora es la 10 (nombre de las alliances): `cut -d "^" -f10` optd_airlines.csv
+- Lo ordenamos con un `sort` y con un `uniq -c` contamos los valores repetidos de cada alliance.
 
 
 
